@@ -19,11 +19,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Permanent+Marker&family=Rubik:wght@300;400;500;600;700;800&family=Caveat+Brush&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Kalam:wght@300;400;700&family=Permanent+Marker&family=Roboto:wght@900&family=Rubik:wght@300;400;500;600;700;800&family=Caveat+Brush&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body className="min-h-screen bg-bg-deep text-text antialiased">
+        {children}
+      </body>
     </html>
   )
 }

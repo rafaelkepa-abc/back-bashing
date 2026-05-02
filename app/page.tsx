@@ -1,18 +1,37 @@
+import { CircleCheckBig } from "lucide-react";
+
+function YuCheck({ variant }: { variant: "teal" | "gold" }) {
+  return (
+    <span className={`yu-check yu-check--${variant}`} aria-hidden="true">
+      <CircleCheckBig
+        className="yu-check-icon"
+        size={18}
+        strokeWidth={variant === "gold" ? 2 : 1.75}
+        aria-hidden="true"
+      />
+    </span>
+  );
+}
+
 export default function Home() {
   return (
     <>
       <header className="site-nav">
         <div className="nav-inner">
           <a href="#top" className="brand">
-            <span className="brand-back">BACK</span>
-            <span className="brand-bashing">Bashing</span>
+            <div className="brand-logo-wrap">
+              <img
+                src="/logo_text.png"
+                alt="Back Bashing"
+                className="brand-logo-img"
+              />
+            </div>
           </a>
 
           <nav className="nav-links" aria-label="Primary">
             <a href="#event">EVENT</a>
             <a href="#details">DETAILS</a>
             <a href="#about">ABOUT</a>
-            <a href="#book">BOOK NOW</a>
           </nav>
 
           <a href="#book" className="btn btn-outline-gold nav-cta">
@@ -42,23 +61,22 @@ export default function Home() {
               </div>
 
               <h1 className="hero-title">
-                <span className="title-back">BACK</span>
-                <span className="title-bashing">Bashing</span>
+                <img
+                  src="/hero_text.png"
+                  alt="Back Bashing"
+                  className="hero-title-img"
+                />
               </h1>
 
-              <div className="subtitle">
-                <span className="sub-line" />
-                <span className="sub-text">DEEP TISSUE MASSAGE</span>
-                <span className="sub-line" />
-              </div>
-              <div className="sub-tag">
-                DONE{'\u00a0\u00a0'}PROPER
+              <div className="subtitle-block">
+                <p className="subtitle">DEEP TISSUE MASSAGE</p>
+                <div className="sub-tag">DONE{"\u00a0\u00a0"}PROPER</div>
               </div>
 
               <p className="lede">
-                Deep, intense deep tissue massage to release stubborn tension in{' '}
-                <span className="hl">neck,</span>{' '}
-                <span className="hl">back</span> and{' '}
+                Deep, intense deep tissue massage to release stubborn tension in{" "}
+                <span className="hl">neck,</span>{" "}
+                <span className="hl">back</span> and{" "}
                 <span className="hl">shoulders</span>.
               </p>
 
@@ -66,25 +84,25 @@ export default function Home() {
                 <li>
                   <span className="x-mark" aria-hidden="true">
                     ✕
-                  </span>{' '}
+                  </span>{" "}
                   No more silly tickle my back.
                 </li>
                 <li>
                   <span className="x-mark" aria-hidden="true">
                     ✕
-                  </span>{' '}
+                  </span>{" "}
                   No more can&apos;t feel anything.
                 </li>
                 <li>
                   <span className="x-mark" aria-hidden="true">
                     ✕
-                  </span>{' '}
+                  </span>{" "}
                   No more light and not effective massage.
                 </li>
                 <li>
                   <span className="x-mark" aria-hidden="true">
                     ✕
-                  </span>{' '}
+                  </span>{" "}
                   No more wasted time and disappointment.
                 </li>
               </ul>
@@ -141,7 +159,9 @@ export default function Home() {
                   </div>
                   <div className="hex-value hex-value-xs">SATISFACTION</div>
                   <div className="hex-label hex-label-stack">
-                    GUARANTEED<br />OR MONEY BACK
+                    GUARANTEED
+                    <br />
+                    OR MONEY BACK
                   </div>
                 </div>
               </div>
@@ -163,7 +183,9 @@ export default function Home() {
             </div>
 
             <div className="hero-right" aria-hidden="false">
-              <img src="/hero.png" alt="" />
+              <div className="portrait-card">
+                <img src="/hero_potrait.png" alt="Rafael, deep tissue specialist" />
+              </div>
             </div>
           </div>
         </section>
@@ -175,48 +197,30 @@ export default function Home() {
                 <h3 className="yu-title">YOU</h3>
                 <ul role="list" className="yu-list">
                   <li>
-                    <span className="check teal" aria-hidden="true">
-                      ✓
-                    </span>{' '}
-                    Missing proper deep tissue massage
+                    <YuCheck variant="teal" /> Missing proper deep tissue
+                    massage
                   </li>
                   <li>
-                    <span className="check teal" aria-hidden="true">
-                      ✓
-                    </span>{' '}
-                    Ready for &quot;Good Pain&quot; experience
+                    <YuCheck variant="teal" /> Ready for &quot;Good Pain&quot;
+                    experience
                   </li>
                   <li>
-                    <span className="check teal" aria-hidden="true">
-                      ✓
-                    </span>{' '}
-                    Want better sport performance
+                    <YuCheck variant="teal" /> Want better sport performance
                   </li>
                 </ul>
               </div>
-              <div className="yu-divider" aria-hidden="true">
-                <div className="spark" />
-              </div>
+              <div className="yu-divider" aria-hidden="true" />
               <div className="yu-col">
                 <h3 className="yu-title gold">ME</h3>
                 <ul role="list" className="yu-list">
                   <li>
-                    <span className="check gold" aria-hidden="true">
-                      ✓
-                    </span>{' '}
-                    Over <strong>10 years experience</strong>
+                    <YuCheck variant="gold" /> Over 10 years experience
                   </li>
                   <li>
-                    <span className="check gold" aria-hidden="true">
-                      ✓
-                    </span>{' '}
-                    <strong>5-star</strong> customer service
+                    <YuCheck variant="gold" /> 5-star customer service
                   </li>
                   <li>
-                    <span className="check gold" aria-hidden="true">
-                      ✓
-                    </span>{' '}
-                    Fix the pain
+                    <YuCheck variant="gold" /> Fix the pain
                   </li>
                 </ul>
               </div>
@@ -225,12 +229,8 @@ export default function Home() {
         </section>
 
         <section className="event-details" id="details">
-          <div className="frame frame-gold">
-            <div className="section-heading">
-              <span className="heading-line" />
-              <h2 className="section-title">EVENT DETAILS</h2>
-              <span className="heading-line" />
-            </div>
+          <fieldset className="frame frame-gold fieldset-section">
+            <legend className="fieldset-legend">EVENT DETAILS</legend>
 
             <div className="details-grid">
               <article className="detail-card">
@@ -247,7 +247,8 @@ export default function Home() {
                 </div>
                 <h4 className="detail-label">DATE</h4>
                 <p className="detail-value">
-                  24th May<br />
+                  24th May
+                  <br />
                   2026
                 </p>
               </article>
@@ -266,8 +267,10 @@ export default function Home() {
                 </div>
                 <h4 className="detail-label">LOCATION</h4>
                 <p className="detail-value">
-                  Block 1A,<br />
-                  11 Adelphi Street,<br />
+                  Block 1A,
+                  <br />
+                  11 Adelphi Street,
+                  <br />
                   M3 6JN
                 </p>
               </article>
@@ -286,8 +289,10 @@ export default function Home() {
                 </div>
                 <h4 className="detail-label">SESSION</h4>
                 <p className="detail-value">
-                  70 Minutes<br />
-                  Deep Tissue<br />
+                  70 Minutes
+                  <br />
+                  Deep Tissue
+                  <br />
                   Massage
                 </p>
               </article>
@@ -298,22 +303,20 @@ export default function Home() {
                 <p className="detail-value">
                   <strong className="big">£99</strong>
                   <br />
-                  £30 Deposit<br />
-                  Remaining £69<br />
+                  £30 Deposit
+                  <br />
+                  Remaining £69
+                  <br />
                   on the day
                 </p>
               </article>
             </div>
-          </div>
+          </fieldset>
         </section>
 
         <section className="booking" id="book">
-          <div className="frame frame-gold">
-            <div className="section-heading">
-              <span className="heading-line" />
-              <h2 className="section-title">BOOK YOUR APPOINTMENT</h2>
-              <span className="heading-line" />
-            </div>
+          <fieldset className="frame frame-gold fieldset-section">
+            <legend className="fieldset-legend">BOOK YOUR APPOINTMENT</legend>
             <p className="booking-sub">
               ONLY 5 SPOTS AVAILABLE – FIRST COME, FIRST SERVED
             </p>
@@ -350,43 +353,44 @@ export default function Home() {
                 <span className="slot-status">AVAILABLE</span>
               </button>
             </div>
+          </fieldset>
 
-            <div className="deposit-card">
-              <div className="deposit-heading">
-                SECURE YOUR SPOT WITH £30 DEPOSIT
-              </div>
-              <button className="btn btn-teal pay-btn" type="button">
-                <span>{'BOOK & PAY DEPOSIT – £30'}</span>
-                <svg
-                  className="lock"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 1 1 6 0v3H9z" />
-                </svg>
-              </button>
-              <div className="payment-note">{'SAFE & SECURE PAYMENT'}</div>
-              <div className="payment-methods" aria-label="Accepted payment methods">
-                <span className="pay pay-visa">VISA</span>
-                <span className="pay-dot">●</span>
-                <span className="pay pay-mc">
-                  <span className="mc-c mc-r" />
-                  <span className="mc-c mc-y" />
-                </span>
-                <span className="pay-dot">|</span>
-                <span className="pay pay-apple">
-                  {'\uF8F7'}Pay
-                </span>
-                <span className="pay-dot">|</span>
-                <span className="pay pay-google">
-                  <span className="g-blue">G</span> Pay
-                </span>
-              </div>
-              <p className="balance-note">
-                Full balance (£69) to be paid on the day.
-              </p>
+          <div className="deposit-card frame frame-gold">
+            <div className="deposit-heading">
+              SECURE YOUR SPOT WITH £30 DEPOSIT
             </div>
+            <button className="btn btn-teal pay-btn" type="button">
+              <span>{"BOOK & PAY DEPOSIT – £30"}</span>
+              <svg
+                className="lock"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 1 1 6 0v3H9z" />
+              </svg>
+            </button>
+            <div className="payment-note">{"SAFE & SECURE PAYMENT"}</div>
+            <div
+              className="payment-methods"
+              aria-label="Accepted payment methods"
+            >
+              <span className="pay pay-visa">VISA</span>
+              <span className="pay-dot">●</span>
+              <span className="pay pay-mc">
+                <span className="mc-c mc-r" />
+                <span className="mc-c mc-y" />
+              </span>
+              <span className="pay-dot">|</span>
+              <span className="pay pay-apple">{"\uF8F7"}Pay</span>
+              <span className="pay-dot">|</span>
+              <span className="pay pay-google">
+                <span className="g-blue">G</span> Pay
+              </span>
+            </div>
+            <p className="balance-note">
+              Full balance (£69) to be paid on the day.
+            </p>
           </div>
         </section>
 
@@ -405,5 +409,5 @@ export default function Home() {
         <p>&copy; 2026 Back Bashing by Rafael. All rights reserved.</p>
       </footer>
     </>
-  )
+  );
 }
