@@ -23,7 +23,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-screen bg-bg-deep text-text antialiased">
+      <body
+        className="min-h-screen bg-bg-deep text-text antialiased"
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>

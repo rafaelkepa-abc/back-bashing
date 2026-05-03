@@ -1,5 +1,7 @@
 import { CircleCheckBig } from "lucide-react";
 
+const CALENDLY_BOOKING_URL = "https://calendly.com/rafaelkepa/30min";
+
 function YuCheck({ variant }: { variant: "teal" | "gold" }) {
   return (
     <span className={`yu-check yu-check--${variant}`} aria-hidden="true">
@@ -34,7 +36,12 @@ export default function Home() {
             <a href="#about">ABOUT</a>
           </nav>
 
-          <a href="#book" className="btn btn-outline-gold nav-cta">
+          <a
+            href={CALENDLY_BOOKING_URL}
+            className="btn btn-outline-gold nav-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             BOOK YOUR SPOT
           </a>
         </div>
@@ -166,7 +173,12 @@ export default function Home() {
                 </div>
               </div>
 
-              <a href="#book" className="btn btn-gold-primary cta-main">
+              <a
+                href={CALENDLY_BOOKING_URL}
+                className="btn btn-gold-primary cta-main"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="cta-main-top">BOOK YOUR SPOT NOW</span>
                 <span className="cta-main-sub">
                   £30 DEPOSIT TO SECURE YOUR SPACE
@@ -322,44 +334,79 @@ export default function Home() {
             </p>
 
             <div className="slots-grid">
-              <button className="slot" type="button">
+              <a
+                href={CALENDLY_BOOKING_URL}
+                className="slot"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="slot-num">1</span>
                 <span className="slot-time">10:00</span>
                 <span className="slot-period">AM</span>
                 <span className="slot-status">AVAILABLE</span>
-              </button>
-              <button className="slot" type="button">
+              </a>
+              <a
+                href={CALENDLY_BOOKING_URL}
+                className="slot"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="slot-num">2</span>
                 <span className="slot-time">12:00</span>
                 <span className="slot-period">PM</span>
                 <span className="slot-status">AVAILABLE</span>
-              </button>
-              <button className="slot" type="button">
+              </a>
+              <a
+                href={CALENDLY_BOOKING_URL}
+                className="slot"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="slot-num">3</span>
                 <span className="slot-time">14:00</span>
                 <span className="slot-period">PM</span>
                 <span className="slot-status">AVAILABLE</span>
-              </button>
-              <button className="slot" type="button">
+              </a>
+              <a
+                href={CALENDLY_BOOKING_URL}
+                className="slot"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="slot-num">4</span>
                 <span className="slot-time">16:00</span>
                 <span className="slot-period">PM</span>
                 <span className="slot-status">AVAILABLE</span>
-              </button>
-              <button className="slot" type="button">
+              </a>
+              <a
+                href={CALENDLY_BOOKING_URL}
+                className="slot"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="slot-num">5</span>
                 <span className="slot-time">18:00</span>
                 <span className="slot-period">PM</span>
                 <span className="slot-status">AVAILABLE</span>
-              </button>
+              </a>
             </div>
           </fieldset>
+
+          <h2 className="closing-title">ONLY 5 SPACES. ONE DAY ONLY.</h2>
+          <p className="closing-sub">
+            EXPERIENCE WHAT PROPER DEEP TISSUE FEELS LIKE.
+          </p>
 
           <div className="deposit-card frame frame-gold">
             <div className="deposit-heading">
               SECURE YOUR SPOT WITH £30 DEPOSIT
             </div>
-            <button className="btn btn-teal pay-btn" type="button">
+            <a
+              href={CALENDLY_BOOKING_URL}
+              className="btn btn-teal pay-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span>{"BOOK & PAY DEPOSIT – £30"}</span>
               <svg
                 className="lock"
@@ -369,7 +416,7 @@ export default function Home() {
               >
                 <path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 1 1 6 0v3H9z" />
               </svg>
-            </button>
+            </a>
             <div className="payment-note">{"SAFE & SECURE PAYMENT"}</div>
             <div
               className="payment-methods"
@@ -394,15 +441,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="closing">
-          <h2 className="closing-title">ONLY 5 SPACES. ONE DAY ONLY.</h2>
-          <p className="closing-sub">
-            EXPERIENCE WHAT PROPER DEEP TISSUE FEELS LIKE.
-          </p>
-          <a href="#book" className="btn btn-gold-primary closing-btn">
-            DON&apos;T MISS OUT – BOOK NOW!
-          </a>
-        </section>
       </main>
 
       <footer className="site-footer">

@@ -227,9 +227,9 @@ ul {
   margin-top: 8px;
 }
 .cta-main-top {
-  font-family: var(--font-display);
+  font-family: "Roboto", sans-serif;
   font-size: 1.12rem;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: 0.08em;
   text-shadow: 0 1px 0 rgba(255, 241, 198, 0.45);
 }
@@ -572,12 +572,12 @@ ul {
 .subtitle {
   display: inline-block;
   margin: 0;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   border-bottom: 1px solid var(--color-gold-line);
   color: var(--color-gold-1);
   font-family: var(--font-display);
-  font-size: clamp(0.72rem, 2.1vw, 1rem);
-  letter-spacing: 0.28em;
+  font-size: clamp(0.95rem, 3.2vw, 1.5rem);
+  letter-spacing: 0.22em;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -590,7 +590,7 @@ ul {
   margin-right: auto;
   border-top: none;
   color: var(--color-text-dim);
-  font-size: 0.85rem;
+  font-size: clamp(0.75rem, 2.2vw, 1.1rem);
   letter-spacing: 0.4em;
   font-weight: 400;
   text-align: center;
@@ -1349,14 +1349,16 @@ fieldset.frame-gold.fieldset-section {
   font-size: clamp(1rem, 2.4vw, 1.35rem);
   font-weight: 800;
   letter-spacing: 0.18em;
-  margin: 0 0 12px;
+  text-align: center;
+  margin: 52px 0 14px;
 }
 .closing-sub {
   font-family: var(--font-brush);
   color: var(--color-teal-1);
   font-size: clamp(0.95rem, 2.2vw, 1.35rem);
   letter-spacing: 0.04em;
-  margin: 0 0 26px;
+  text-align: center;
+  margin: 0 0 40px;
   transform: skewX(-4deg);
 }
 .closing-btn {
@@ -1399,6 +1401,10 @@ fieldset.frame-gold.fieldset-section {
   .portrait-card img {
     height: auto;
   }
+  .hero-title,
+  .subtitle-block {
+    display: none;
+  }
   .nav-links {
     display: none;
   }
@@ -1411,11 +1417,6 @@ fieldset.frame-gold.fieldset-section {
 }
 
 @media (max-width: 640px) {
-  .hero-title,
-  .subtitle-block {
-    display: none;
-  }
-
   .hero {
     padding: 32px 20px 30px;
   }
@@ -1434,8 +1435,8 @@ fieldset.frame-gold.fieldset-section {
   }
 
   .subtitle {
-    font-size: 0.58rem;
-    letter-spacing: 0.14em;
+    font-size: clamp(0.9rem, 5vw, 1.3rem);
+    letter-spacing: 0.18em;
   }
 
   .hex-row {
