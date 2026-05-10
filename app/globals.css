@@ -1290,41 +1290,22 @@ fieldset.frame-gold.fieldset-section {
 }
 .pay-mc {
   display: inline-flex;
-  width: 36px;
-  height: 22px;
-  position: relative;
+  width: 38px;
+  height: 24px;
 }
-.mc-c {
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  top: 0;
+.pay-mc svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 .mc-r {
-  left: 0;
-  background: #eb001b;
+  fill: #eb001b;
 }
 .mc-y {
-  right: 0;
-  background: #f79e1b;
-  mix-blend-mode: multiply;
+  fill: #f79e1b;
 }
-.pay-apple {
-  color: #fff;
-}
-.pay-google .g-blue {
-  font-weight: 800;
-  background: linear-gradient(
-    135deg,
-    #4285f4,
-    #ea4335 33%,
-    #fbbc05 66%,
-    #34a853
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.mc-mid {
+  fill: #ff5f00;
 }
 
 .balance-note {
@@ -1353,13 +1334,13 @@ fieldset.frame-gold.fieldset-section {
   margin: 52px 0 14px;
 }
 .closing-sub {
-  font-family: var(--font-brush);
+  font-family: var(--font-display);
   color: var(--color-teal-1);
   font-size: clamp(0.95rem, 2.2vw, 1.35rem);
-  letter-spacing: 0.04em;
+  font-weight: 800;
+  letter-spacing: 0.18em;
   text-align: center;
   margin: 0 0 40px;
-  transform: skewX(-4deg);
 }
 .closing-btn {
   padding: 16px 36px;

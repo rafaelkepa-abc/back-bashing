@@ -1,6 +1,6 @@
 import { CircleCheckBig } from "lucide-react";
 
-const CALENDLY_BOOKING_URL = "https://calendly.com/rafaelkepa/30min";
+const CALENDLY_BOOKING_URL = "https://calendly.com/rafaelkepa/70min";
 
 function YuCheck({ variant }: { variant: "teal" | "gold" }) {
   return (
@@ -81,7 +81,7 @@ export default function Home() {
               </div>
 
               <p className="lede">
-                Deep, intense deep tissue massage to release stubborn tension in{" "}
+                Deep, intense massage to release stubborn tension in{" "}
                 <span className="hl">neck,</span>{" "}
                 <span className="hl">back</span> and{" "}
                 <span className="hl">shoulders</span>.
@@ -397,7 +397,7 @@ export default function Home() {
 
           <h2 className="closing-title">ONLY 5 SPACES. ONE DAY ONLY.</h2>
           <p className="closing-sub">
-            EXPERIENCE WHAT PROPER DEEP TISSUE FEELS LIKE.
+            SATISFACTION GUARANTEED OR MONEY BACK
           </p>
 
           <div className="deposit-card frame frame-gold">
@@ -428,14 +428,14 @@ export default function Home() {
               <span className="pay pay-visa">VISA</span>
               <span className="pay-dot">●</span>
               <span className="pay pay-mc">
-                <span className="mc-c mc-r" />
-                <span className="mc-c mc-y" />
-              </span>
-              <span className="pay-dot">|</span>
-              <span className="pay pay-apple">{"\uF8F7"}Pay</span>
-              <span className="pay-dot">|</span>
-              <span className="pay pay-google">
-                <span className="g-blue">G</span> Pay
+                <svg viewBox="0 0 38 24" aria-hidden="true" focusable="false">
+                  <circle cx="14" cy="12" r="10" className="mc-r" />
+                  <circle cx="24" cy="12" r="10" className="mc-y" />
+                  <path
+                    d="M19 2a10 10 0 0 0 0 20 10 10 0 0 0 0-20z"
+                    className="mc-mid"
+                  />
+                </svg>
               </span>
             </div>
             <p className="balance-note">
