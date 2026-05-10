@@ -1,6 +1,7 @@
 import { CircleCheckBig } from "lucide-react";
 
-const CALENDLY_BOOKING_URL = "https://calendly.com/rafaelkepa/70min";
+const CALENDLY_BOOKING_URL =
+  "https://calendly.com/rafaelkepa/70min?month=2026-05&date=2026-05-24";
 
 function YuCheck({ variant }: { variant: "teal" | "gold" }) {
   return (
