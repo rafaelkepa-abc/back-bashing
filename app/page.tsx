@@ -18,7 +18,7 @@ function YuCheck({ variant }: { variant: "teal" | "gold" }) {
 export default function Home() {
   return (
     <>
-      <header className="site-nav">
+      <header className="site-nav test">
         <div className="nav-inner">
           <a href="#top" className="brand">
             <div className="brand-logo-wrap">
@@ -196,7 +196,10 @@ export default function Home() {
 
             <div className="hero-right" aria-hidden="false">
               <div className="portrait-card">
-                <img src="/hero_potrait.png" alt="Rafael, deep tissue specialist" />
+                <img
+                  src="/hero_potrait.png"
+                  alt="Rafael, deep tissue specialist"
+                />
               </div>
             </div>
           </div>
@@ -440,7 +443,6 @@ export default function Home() {
             </p>
           </div>
         </section>
-
       </main>
 
       <footer className="site-footer">
