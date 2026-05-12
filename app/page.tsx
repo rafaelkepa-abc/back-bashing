@@ -198,7 +198,7 @@ export default function Home() {
             <div className="hero-right" aria-hidden="false">
               <div className="portrait-card">
                 <img
-                  src="/hero_potrait.png"
+                  src="/final_portrait.png"
                   alt="Rafael, deep tissue specialist"
                 />
               </div>
@@ -448,6 +448,10 @@ export default function Home() {
 
       <footer className="site-footer">
         <p>&copy; 2026 Back Bashing by Rafael. All rights reserved.</p>
+        <p className="site-footer-contact">
+          Got any questions? Please send an email:{" "}
+          <a href="mailto:backbashing@gmail.com">backbashing@gmail.com</a>
+        </p>
       </footer>
     </>
   );

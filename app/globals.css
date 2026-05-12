@@ -1362,6 +1362,20 @@ fieldset.frame-gold.fieldset-section {
   letter-spacing: 0.08em;
 }
 
+.site-footer-contact {
+  margin-top: 12px;
+}
+
+.site-footer-contact a {
+  color: var(--color-gold-line);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.site-footer-contact a:hover {
+  color: var(--color-text);
+}
+
 /* =================================================================
    RESPONSIVE
    ================================================================= */
